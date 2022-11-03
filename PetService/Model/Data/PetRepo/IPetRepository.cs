@@ -5,9 +5,9 @@ namespace PetService.Model.Data.PetRepo
     public interface IPetRepository
     {
         void AddPet(Pet pet);
-        Pet getPetById(int id);
         void UpdatePet(Pet pet);
+        Pet GetPet(int id);
         void DeletePet(Pet pet);
-        List<Pet> getPetsByPetOwnerId(int id);
+        List<Pet> GetAllPetByUserId(int id);
     }
 }

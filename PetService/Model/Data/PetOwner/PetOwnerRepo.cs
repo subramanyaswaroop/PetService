@@ -12,7 +12,7 @@ namespace PetService.Model.Data.PetOwnerRepo
             db.SaveChanges();
         }
 
-        public PetOwner GetPetOwnerById(int id)
+        public PetOwner GetPetOwner(int id)
         {
             return db.PetOwners.Find(id);
         }
@@ -23,7 +23,7 @@ namespace PetService.Model.Data.PetOwnerRepo
             db.SaveChanges();
         }
 
-        public void updatePetOwner(PetOwner petOwner)
+        public void UpdatePetOwner(PetOwner petOwner)
         {
             db.Entry(petOwner).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             db.SaveChanges();

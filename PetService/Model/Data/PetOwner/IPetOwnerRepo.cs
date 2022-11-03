@@ -6,8 +6,9 @@ namespace PetService.Model.Data.PetOwnerRepo
     {
         void AddPetOwner(PetOwner petOwner);
         void RemovePetOwner(PetOwner petOwner);
-        PetOwner GetPetOwnerById(int id);
-        void updatePetOwner(PetOwner petOwner);
+        PetOwner GetPetOwner(int id);
+        void UpdatePetOwner(PetOwner petOwner);
+
 
     }
 }

@@ -12,27 +12,28 @@ namespace PetService.Model.Data.PetRepo
             db.SaveChanges();
         }
 
+        public Pet GetPet(int id)
+        {
+            return db.Pets.Find(id);
+        }
+
         public void DeletePet(Pet pet)
         {
             db.Pets.Remove(pet);
             db.SaveChanges();
         }
 
-        public Pet getPetById(int id)
-        {
-            return db.Pets.Find(id);
-        }
-        public List<Pet> getPetsByPetOwnerId(int id)
-        {
-            return(from Pet in db.Pets 
-                   where Pet.PetOwnerId == id 
-                   select Pet).ToList();
-        }
-
         public void UpdatePet(Pet pet)
         {
             db.Entry(pet).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             db.SaveChanges();
+        }
+
+        public List<Pet> GetAllPetByUserId(int id)
+        {
+            return (from pet in db.Pets
+                    where pet.PetOwnerId == id
+                    select pet).ToList();
         }
     }
 }
