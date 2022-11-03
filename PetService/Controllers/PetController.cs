@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using PetService.Model.Data.Pet;
-using PetService.Model.Data.PetOwner;
+﻿using Microsoft.AspNetCore.Mvc;
+using PetService.Model.Data.PetOwnerRepo;
+using PetService.Model.Data.PetRepo;
 
 namespace PetService.Controllers
 {
@@ -9,11 +8,8 @@ namespace PetService.Controllers
     [ApiController]
     public class PetController : ControllerBase
     {
-        IPetOwnerRepo repo = new PetOwnerRepo();
-        IPetRepo repo1 = new PetRepo();
-        //public PetController(IPetOwnerRepo repo)
-        //{
-        //    this.repo = repo;
-        //}
+        IPetOwnerRepo Orepo = new PetOwnerRepo();
+        IPetRepository Prepo = new PetRepository();
+        
     }
 }
