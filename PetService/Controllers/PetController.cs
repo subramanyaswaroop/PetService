@@ -4,7 +4,7 @@ using PetService.Model.Data.PetRepo;
 
 namespace PetService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] 
     [ApiController]
     public class PetController : ControllerBase
     {
